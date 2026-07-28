@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@hono/clerk-auth": "^3.1.0",
-    "@hono/node-server": "^1.19.9",
+    "@hono/node-server": "^2.0.10",
     "@repo/kafka": "workspace:*",
-    "hono": "^4.11.10",
+    "hono": "^4.12.27",
     "razorpay": "^2.9.6",
     "stripe": "^18.5.0"
   },
