@@ -23,11 +23,11 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@clerk/fastify": "^2.6.24",
+    "@clerk/fastify": "^3.1.57",
     "@fastify/cors": "^11.2.0",
     "@repo/kafka": "workspace:*",
     "@repo/order-db": "workspace:*",
     "date-fns": "^4.1.0",
-    "fastify": "^5.7.4"
+    "fastify": "^5.10.0"
   }
 }

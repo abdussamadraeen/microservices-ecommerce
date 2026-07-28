@@ -14,7 +14,7 @@
   "author": "ABDUS SAMAD RAEEN",
   "license": "ISC",
   "dependencies": {
-    "@clerk/express": "^1.7.72",
+    "@clerk/express": "^2.1.47",
     "@repo/kafka": "workspace:*",
     "cors": "^2.8.6",
     "express": "^5.2.1"
