@@ -1,0 +1,29 @@
+{
+  "name": "ecom",
+  "private": true,
+  "author": "ABDUS SAMAD RAEEN",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:all": "concurrently \"pnpm --filter product-service dev\" \"pnpm --filter order-service dev\" \"pnpm --filter payment-service dev\" \"pnpm --filter auth-service dev\" \"pnpm --filter email-service dev\" \"pnpm --filter client dev\" \"pnpm --filter admin dev\"",
+    "restart": "pnpm kill:all && pnpm dev:all",
+    "kill:all": "taskkill /F /IM node.exe /T 2>nul || echo No Node processes to kill",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "turbo": "^2.8.10",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

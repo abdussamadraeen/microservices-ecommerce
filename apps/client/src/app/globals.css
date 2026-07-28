@@ -1,0 +1,266 @@
+@import "tailwindcss";
+@source "../src";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+    --radius: 0.625rem;
+    /* Heavenly Realm (Light Mode) */
+    --background: oklch(0.98 0.01 240);
+    /* Pale Cloud Mist */
+    --foreground: oklch(0.15 0.05 260);
+    /* Deep Slate */
+
+    /* White Jade Glass */
+    --card: oklch(1 0 0 / 0.6);
+    --card-foreground: oklch(0.15 0.05 260);
+
+    --popover: oklch(1 0 0 / 0.9);
+    --popover-foreground: oklch(0.15 0.05 260);
+
+    /* Imperial Gold Primary */
+    --primary: oklch(0.6 0.18 60);
+    --primary-foreground: oklch(0.98 0.01 240);
+
+    /* Sky Blue Secondary */
+    --secondary: oklch(0.9 0.05 240);
+    --secondary-foreground: oklch(0.3 0.1 260);
+
+    --muted: oklch(0.96 0.01 240);
+    --muted-foreground: oklch(0.5 0.05 240);
+
+    /* Sky Blue Accent */
+    --accent: oklch(0.9 0.05 240 / 0.5);
+    --accent-foreground: oklch(0.15 0.05 260);
+
+    --destructive: oklch(0.6 0.2 20);
+    --destructive-foreground: oklch(0.98 0.01 240);
+    --border: oklch(0.2 0.05 260 / 0.1);
+    --input: oklch(0.2 0.05 260 / 0.1);
+    --ring: oklch(0.6 0.18 60 / 0.5);
+
+    /* Dynamic Gradient Variables (Heavenly Light) */
+    --gradient-1: oklch(0.9 0.05 60 / 0.2);
+    /* Sun glow */
+    --gradient-2: oklch(0.85 0.1 240 / 0.1);
+    /* Sky mist */
+    --gradient-3: oklch(0.9 0.05 160 / 0.1);
+    /* Jade mist */
+    --gradient-base-start: oklch(0.98 0.01 240);
+    --gradient-base-end: oklch(0.95 0.02 240);
+}
+
+.dark {
+    /* Void & Energy Theme */
+    --background: oklch(0.05 0.02 260);
+    /* Deep indigo void */
+    --foreground: oklch(0.98 0.01 260);
+    /* Spirit white */
+
+    /* Crystalline Glass Cards */
+    --card: oklch(0.1 0.03 260 / 0.3);
+    --card-foreground: oklch(0.98 0.01 260);
+
+    --popover: oklch(0.08 0.03 260 / 0.9);
+    --popover-foreground: oklch(0.98 0.01 260);
+
+    /* Spirit Gold Primary */
+    --primary: oklch(0.75 0.18 75);
+    --primary-foreground: oklch(0.1 0.05 260);
+
+    /* Jade/Teal Secondary */
+    --secondary: oklch(0.15 0.05 180 / 0.5);
+    --secondary-foreground: oklch(0.85 0.1 180);
+
+    --muted: oklch(0.15 0.03 260);
+    --muted-foreground: oklch(0.7 0.05 260);
+
+    /* Celestial Blue Accent */
+    --accent: oklch(0.2 0.08 250 / 0.4);
+    --accent-foreground: oklch(0.9 0.05 250);
+
+    --destructive: oklch(0.6 0.2 20);
+    --destructive-foreground: oklch(0.98 0.01 260);
+    --border: oklch(0.3 0.1 260 / 0.3);
+    --input: oklch(0.2 0.05 260 / 0.5);
+    --ring: oklch(0.75 0.18 75 / 0.5);
+
+    /* Dynamic Gradient Variables (Void Dark) */
+    --gradient-1: oklch(0.15 0.05 260 / 0.4);
+    --gradient-2: oklch(0.2 0.1 250 / 0.2);
+    --gradient-3: oklch(0.15 0.05 180 / 0.2);
+    --gradient-base-start: oklch(0.05 0.02 260);
+    --gradient-base-end: oklch(0.02 0.01 260);
+}
+
+.gold {
+    /* Luxurious Gold Theme (Champagne Light) */
+    --background: oklch(0.99 0.01 95);
+    /* Pale Pearl Cream */
+    --foreground: oklch(0.2 0.05 60);
+    /* Dark Bronze text */
+
+    /* Gold Glass Cards */
+    --card: oklch(0.98 0.02 95 / 0.6);
+    --card-foreground: oklch(0.2 0.05 60);
+
+    --popover: oklch(0.99 0.01 95 / 0.95);
+    --popover-foreground: oklch(0.2 0.05 60);
+
+    /* Soft Champagne Primary */
+    --primary: oklch(0.7 0.15 85);
+    /* Elegant Soft Gold */
+    --primary-foreground: oklch(0.99 0.01 95);
+
+    /* Pale Sand Secondary */
+    --secondary: oklch(0.96 0.03 90);
+    --secondary-foreground: oklch(0.3 0.05 60);
+
+    --muted: oklch(0.94 0.03 90);
+    --muted-foreground: oklch(0.5 0.05 60);
+
+    /* Golden Accent */
+    --accent: oklch(0.95 0.05 85 / 0.5);
+    --accent-foreground: oklch(0.2 0.05 60);
+
+    --destructive: oklch(0.6 0.2 30);
+    --destructive-foreground: oklch(0.99 0.01 95);
+    --border: oklch(0.8 0.1 85 / 0.3);
+    /* Soft Gold Border */
+    --input: oklch(0.5 0.05 85 / 0.2);
+    --ring: oklch(0.7 0.15 85 / 0.5);
+
+    /* Dynamic Gradient Variables (Morning Light) */
+    --gradient-1: oklch(0.9 0.05 85 / 0.3);
+    /* Pale Gold */
+    --gradient-2: oklch(0.85 0.1 90 / 0.2);
+    /* Soft Amber */
+    --gradient-3: oklch(0.95 0.02 95 / 0.4);
+    /* Pearl Mist */
+    --gradient-base-start: oklch(0.99 0.01 95);
+    --gradient-base-end: oklch(0.98 0.02 95);
+}
+
+body {
+    @apply bg-background text-foreground min-h-screen selection:bg-primary/30 selection:text-primary-foreground;
+    background-image:
+        radial-gradient(circle at 50% 0%, var(--gradient-1) 0%, transparent 60%),
+        radial-gradient(circle at 80% 10%, var(--gradient-2) 0%, transparent 40%),
+        radial-gradient(circle at 20% 90%, var(--gradient-3) 0%, transparent 50%),
+        linear-gradient(to bottom, var(--gradient-base-start), var(--gradient-base-end));
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    animation: aurora 20s ease-in-out infinite alternate;
+    transition: background-image 0.5s ease-in-out;
+}
+
+@keyframes aurora {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@layer utilities {
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+
+    .transform-style-3d {
+        transform-style: preserve-3d;
+    }
+
+    .backface-hidden {
+        backface-visibility: hidden;
+    }
+
+    /* System Window Scanline */
+    .system-scan {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .system-scan::after {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent 0%, rgba(14, 165, 233, 0.1) 50%, transparent 100%);
+        animation: scan 4s linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes scan {
+        0% {
+            top: -100%;
+        }
+
+        100% {
+            top: 200%;
+        }
+    }
+}
+
+@media print {
+
+    /* Hide Navbar, Footer, and other unwanted elements */
+    nav,
+    footer,
+    .chat-widget {
+        display: none !important;
+    }
+
+    /* Force white background and black text for better printing */
+    body {
+        background: white !important;
+        color: black !important;
+        background-image: none !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Reset margins for full page printing */
+    @page {
+        margin: 2cm;
+    }
+
+    /* Override standard container widths */
+    .mx-auto,
+    .container {
+        max-width: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "email-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm dlx tsx --env-file=.env --watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "ABDUS SAMAD RAEEN",
+  "license": "ISC",
+  "dependencies": {
+    "@repo/kafka": "workspace:*",
+    "@repo/types": "workspace:*",
+    "nodemailer": "^7.0.13"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^24.10.13",
+    "@types/nodemailer": "^7.0.10"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "css.lint.important": "ignore",
+  "htmlhint.options": {
+    "style-disabled": true
+  },
+  "webhint.enableTelemetry": "disabled",
+  "html.validate.styles": false,
+  "vscode-edge-devtools.webhint": false,
+  "vscode-edge-devtools.headless": true,
+  "css.lint.unknownAtRules": "ignore"
+}

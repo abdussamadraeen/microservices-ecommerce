@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id               Int              @id @default(autoincrement())
+  name             String
+  shortDescription String
+  description      String
+  price            Int
+  inventory        Int              @default(0)
+  sizes            String[]
+  colors           String[]
+  images           Json
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+  categorySlug     String
+  category         Category         @relation(fields: [categorySlug], references: [slug])
+  variantType      String           @default("Size")
+  variants         ProductVariant[]
+}
+
+model ProductVariant {
+  id        Int     @id @default(autoincrement())
+  productId Int
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name      String
+  price     Int
+  stock     Int     @default(0)
+  variantName String?
+  variantDescription String?
+}
+
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String
+  slug     String    @unique
+  products Product[]
+  parentId Int?
+  parent   Category? @relation("CategoryToCategory", fields: [parentId], references: [id])
+  children Category[] @relation("CategoryToCategory")
+}
+
+model Banner {
+  id        Int      @id @default(autoincrement())
+  title     String
+  image     String
+  link      String
+  showTitle Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Settings {
+  id           Int      @id @default(autoincrement())
+  storeName    String   @default("Xiaomi Store")
+  storeLogo    String   @default("/logo.png")
+  storeAddress String   @default("Default Address")
+  currency     String   @default("INR")
+  language     String   @default("en-IN")
+  updatedAt    DateTime @updatedAt
+}
+
+model EcosystemConfig {
+  id            Int      @id @default(autoincrement())
+  title         String   @default("The Xiaomi Ecosystem.")
+  subtitle      String   @default("Seamlessly connected. Beautifully designed.")
+  heroProductId Int?
+  subProductIds Int[]
+  updatedAt     DateTime @updatedAt
+}

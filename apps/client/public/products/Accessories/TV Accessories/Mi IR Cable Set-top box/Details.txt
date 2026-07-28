@@ -1,0 +1,14 @@
+Mi IR Cable Set-top box (STB) Controller
+
+₹249
+
+The Mi IR Cable Set-top box (STB) Controller is an accessory that lets your Mi TV remote control a separate cable/DTH set-top box by relaying infrared (IR) signals. It acts like a bridge between your TV and the STB so you can use just one remote instead of multiple controllers.
+
+📺 Key Points (Simple)
+✔ Extends IR signals from the TV remote to devices like set-top boxes, DVD players, or AV receivers.
+✔ Includes an IR receiver and emitter cable that you place near your STB’s IR sensor.
+✔ Helps control STB functions (like channel change) using the Mi TV remote.
+✔ Plugs into your TV (usually via USB) and works with devices that use infrared remotes (not RF).
+
+📦 Typical Use
+Connect one end to your TV’s USB port and place the IR emitter in front of the set-top box’s IR sensor. This lets the TV remote commands reach the STB through the cable.
