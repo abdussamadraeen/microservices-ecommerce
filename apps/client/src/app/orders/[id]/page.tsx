@@ -3,6 +3,8 @@ import { ArrowLeft, CheckCircle2, Clock, Truck, Package, MapPin, CreditCard, Sho
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 const steps = [
     { status: "processing", label: "Order Placed", icon: Clock },
     { status: "confirmed", label: "Confirmed", icon: CheckCircle2 },

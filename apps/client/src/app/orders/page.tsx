@@ -1,8 +1,8 @@
 import { getUserOrders } from "@/lib/order";
-
-
 import Link from "next/link";
 import { ShoppingBag, Package, MapPin, CreditCard, Calendar, ChevronRight } from "lucide-react";
+
+export const dynamic = "force-dynamic";
 
 const getStatusColor = (status: string) => {
   switch (status) {
